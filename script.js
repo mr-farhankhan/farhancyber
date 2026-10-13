@@ -1,22 +1,18 @@
-(function initShieldIntro() {
-    const intro = document.getElementById('shieldIntro');
-    const title = document.getElementById('introTitle');
-    if (!intro || !title) {
+(function initMinimalIntro() {
+    const intro = document.getElementById('minimalIntro');
+    if (!intro) {
         document.body.classList.remove('intro-active');
         return;
     }
 
-    setTimeout(() => { intro.classList.add('breaking'); }, 600);
-    setTimeout(() => { intro.classList.add('exploding'); }, 1500);
-    setTimeout(() => { title.classList.add('show'); }, 2000);
     setTimeout(() => {
-        intro.classList.add('done');
+        intro.classList.add('hidden');
         document.body.classList.remove('intro-active');
-    }, 3200);
+    }, 2600);
+
     setTimeout(() => {
-        intro.style.display = 'none';
         intro.remove();
-    }, 3900);
+    }, 3500);
 })();
 
 const EMAILJS_SERVICE_ID = 'service_px36p6n';
